@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.glob {
+    background-color: gray;
+    display: grid;
+    grid-template-areas:
+        "eight eight eight"
+        "two two three"
+        "four five five"
+        "six five five"
+        "seven five five"
+        "one one one"
+    ;
+    gap: 10px;
+}
+
+.glob div {
+    background-color: rgb(58, 58, 255);
+    counter-increment: count;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glob div::before {
+    content: counter(count);
+    color: white;
+    font-weight: bold;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
